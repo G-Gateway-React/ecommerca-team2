@@ -1,9 +1,25 @@
 import styled from "@emotion/styled";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import img1 from "../../Assets/mask.png";
+import img1 from "../../assets/mask.png";
 import Button from "../Button";
 import Nav from "../NavBar/Navbar";
+
+export const HeroContainer = styled(Container)`
+  background-image: url(${img1});
+  height: 100vh;
+  background-size: "cover";
+  background-position: "center center";
+  display: "flex";
+  flex-direction: "column";
+`;
+
+export const HeroBox = styled(Box)`
+  height: "100%";
+  display: "flex";
+  align-items: "center";
+  justify-content: "start";
+`;
 
 export const BoxContent = styled(Box)`
   width: 35%;
@@ -39,26 +55,9 @@ export const BoxContent = styled(Box)`
 
 function Hero() {
   return (
-    <Container
-      maxWidth="xl"
-      sx={{
-        backgroundImage: `url(${img1})`,
-        height: "100vh",
-        backgroundSize: "cover",
-        backgroundPosition: "center center",
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
+    <HeroContainer maxWidth="xl">
       <Nav />
-      <Box
-        sx={{
-          height: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "start",
-        }}
-      >
+      <HeroBox>
         <BoxContent>
           <h1>
             <span>NEW</span>
@@ -73,8 +72,8 @@ function Hero() {
 
           <Button>SHOP NEW ARRIVALS</Button>
         </BoxContent>
-      </Box>
-    </Container>
+      </HeroBox>
+    </HeroContainer>
   );
 }
 
