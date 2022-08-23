@@ -7,24 +7,37 @@ import { styled } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
-export const StyledTypography = styled(Typography)(({ theme }) => ({
-  fontSize: "1rem",
-  fontWeight: "200",
-  textAlign: "center",
-  color: "#000",
-  fontFamily: "'Poppins', sans-serif",
-}));
+type NavProps = {
+  black?: boolean;
+  NumItems?: number;
+};
+const Child = ({ black, NumItems }: NavProps) => {
+  const StyledTypography = styled(Typography)(({ theme }) => ({
+    fontSize: "1rem",
+    fontWeight: black ? "400" : "200",
+    color: black ? "#000" : "#fff",
+    textAlign: "center",
+    fontFamily: "'Poppins', sans-serif",
+  }));
 
-export const LogoStyledTypography = styled(StyledTypography)(({ theme }) => ({
-  fontSize: "1.7rem",
-  fontWeight: "900",
-  color: "#000",
-  "&:first-letter": {
-    color: "#D1094B",
-  },
-}));
+  const LogoStyledTypography = styled(StyledTypography)(({ theme }) => ({
+    fontSize: "1.7rem",
+    fontWeight: "900",
+    color: black ? "#000" : "#fff",
 
-export default function ButtonAppBar() {
+    flexGrow: 8,
+    textAlign: "center",
+
+    fontFamily: "'Inter', sans-serif",
+    "&:first-letter": {
+      color: "#D1094B",
+    },
+
+    "@media (max-width: 700px)": {
+      fontSize: "2rem",
+    },
+  }));
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" color="transparent" elevation={0}>
@@ -57,11 +70,12 @@ export default function ButtonAppBar() {
           </StyledTypography>
 
           <StyledTypography variant="h6" sx={{ flexGrow: 1 }}>
-            BAG
+            BAG{NumItems}
           </StyledTypography>
           <FavoriteBorderIcon sx={{ color: "#000" }} />
         </Toolbar>
       </AppBar>
     </Box>
   );
-}
+};
+export default Child;

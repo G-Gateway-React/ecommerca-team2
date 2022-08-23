@@ -84,7 +84,7 @@ export const Login = () => {
   };
   return (
     <>
-      <Nav />
+      <Nav black NumItems={2}/>
       <Box
         sx={{
           display: "flex",

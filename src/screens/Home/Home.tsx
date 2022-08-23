@@ -1,5 +1,5 @@
-import Cards from "../components/Cards";
-import Footer from "../components/Footer";
+import Cards from "../../Components/Cards";
+import Footer from "../../Components/Footer";
 
 
  const  Home: React.FC= () => {
