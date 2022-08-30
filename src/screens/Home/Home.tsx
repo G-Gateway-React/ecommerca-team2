@@ -1,14 +1,13 @@
 import Cards from "../../Components/Cards";
 import Footer from "../../Components/Footer";
 
-
- const  Home: React.FC= () => {
+const Home: React.FC = () => {
   return (
     <>
-   <Cards/>
-   <Footer/>
-   </>
+      {/* <Cards /> */}
+      <Footer />
+    </>
+  );
+};
 
-  )}
-
-  export default Home;
+export default Home;
