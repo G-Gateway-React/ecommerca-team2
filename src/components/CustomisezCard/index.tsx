@@ -1,13 +1,13 @@
 import * as React from 'react';
 import CardMedia from '@mui/material/CardMedia';
-import { StyledCard, Overlay, Clipover } from './styleCard';
+import { StyledCard, Clipover } from './styleCard';
 
  const CustomisezCard: React.FC= () => {
   return (
     <>
     <StyledCard sx={{  width: '32%', border:'none'  }}>
       
-      <Overlay></Overlay>
+      
       
       <CardMedia 
         component="img"

@@ -3,17 +3,17 @@ import styled from '@emotion/styled'
 export const CardLayout = styled.div`
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap:20px;
-  margin-top:50px;
-  
+  flex-flow: row wrap;
+  gap:2%;
+  margin-top:50px; 
+  z-index: 1;
 `
+
 export const CardTwice = styled.div`
   display: flex;
   margin-top: 50px;
   `
-
-
+  
 export const Title = styled.h1`
 display: flex;
 justify-content:center;

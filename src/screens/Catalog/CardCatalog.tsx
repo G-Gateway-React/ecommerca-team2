@@ -12,10 +12,10 @@ import { StyledCard,  Clipover } from './CardCatalogStyle';
         alt="T-shirt"
         sx={{position: 'relative'}}
       />
-       <Clipover>
+       {/* <Clipover>
         <text>$24.59</text>
         <span></span>
-      </Clipover>
+      </Clipover> */}
     </StyledCard></>
   
 

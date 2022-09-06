@@ -5,12 +5,40 @@ import Card from "@mui/material/Card";
 
 export const StyledCard = styled(Card)`
 transition: all .5s ease-in-out;
- :hover {
-    filter: grayscale(80%);
-
-  }
   position: relative;
+  flex-basis: 31.33%;
+  margin-top: 1%;
+  z-index: 1;
+  img{
+    height: 100%;
+    z-index: 2 !important;
+  }
 
+  &:hover .title{
+    position: absolute;
+    width: 100%;
+    bottom: 40px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    transition: all .5s ease-in-out;
+    z-index: 3;
+    font-size: 40px;
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+
+  &:hover .overlay{
+      transition: all .5s ease-in-out;
+      position:  absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, .7);
+      z-index: 3;
+  } 
 `
 export const Clipover = styled.div`
   box-sizing: border-box;
@@ -45,13 +73,5 @@ export const Clipover = styled.div`
 
 `;
 
-export const Overlay = styled.div`
-  position:  absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-`
 
 

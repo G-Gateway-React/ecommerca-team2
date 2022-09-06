@@ -1,23 +1,20 @@
 import { Container } from '@mui/system';
-import React from 'react' 
+import React, {useEffect} from 'react' 
 import CustomisezCard from '../CustomisezCard';
 import CustomisezCard2 from '../CustomisezCard2';
 import {CardLayout , Title , TitleSmall , CardTwice} from './styles'
+import {useSelector} from 'react-redux'
+import {categoryThunk} from '../../store/category/categorySlice'
+import { useAppDispatch, useAppSelector } from '../../store';
+
 
  const  Cards: React.FC= () => {
+
   return (
    <Container>
      <>
      <Title><span>CATEGOR</span>IES</Title>
     <CardLayout>
-      <CustomisezCard/>
-      <CustomisezCard/>
-      <CustomisezCard/>
-      <CustomisezCard/>
-      <CustomisezCard/>
-      <CustomisezCard/>
-      <CustomisezCard/>
-      <CustomisezCard/>
       <CustomisezCard/>
     </CardLayout>
 

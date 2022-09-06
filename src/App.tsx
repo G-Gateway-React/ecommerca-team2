@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import CustomisezCard from './Components/CustomisezCard'
+import Bag from './Components/Bag/Bag';
+import Cards from './Components/Cards';
+import Home from './screens/Home';
 
-function App() {
+
+
+
+const  App:React.FC =()=> {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+      <Routes>
+           
+            <Route path={"/"} element={<Home/>} />
+            <Route path={"/Bag"} element={<Bag/>} />
+              <Route path={"/Cards"} element={<Cards/>} />
+            {/* <Route path='/about'  />
+            <Route path='/'  />
+            <Route path='/'  /> */}
+            </Routes>
+            </BrowserRouter>
   );
 }
 

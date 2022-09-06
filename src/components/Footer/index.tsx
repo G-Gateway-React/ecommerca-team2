@@ -6,10 +6,10 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import { Container } from '@mui/system';
 
 
-
  const Footer: React.FC= () => {
   return (
-    <><Container>
+    <>
+    <Container>
       <SingFooter/>
     <FooterStyle>       
         <Parent>
