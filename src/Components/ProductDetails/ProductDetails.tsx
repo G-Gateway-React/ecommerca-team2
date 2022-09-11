@@ -7,10 +7,10 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 // -- types ----------------------------------------------------------------- //
 export interface ProductProps {
-  Name?: string;
-  Price?: string;
-  Colors?: String[];
-  Sizes?: String[];
+  name?: string;
+  price?: string;
+  colors?: String[];
+  sizes?: String[];
 }
 
 const StyledBox = styled(Box)`
@@ -43,10 +43,10 @@ const StyledBox = styled(Box)`
 `;
 
 export const ProductDetails = ({
-  Name,
-  Price,
-  Colors,
-  Sizes,
+  name,
+  price,
+  colors,
+  sizes,
 }: ProductProps) => {
   const [activeColor, setActiveColor] = useState("#DFDED9");
   const [activeSize, setActiveSize] = useState("M");
@@ -66,7 +66,7 @@ export const ProductDetails = ({
           fontWeight: "500",
         }}
       >
-        {Name}
+        {name}
       </Typography>
 
       <Typography
@@ -77,7 +77,7 @@ export const ProductDetails = ({
           fontWeight: "500",
         }}
       >
-        ${Price}
+        ${price}
         <Typography sx={{ color: "#D8D8D8", fontWeight: "300" }}>
           PRE-ORDER
         </Typography>
@@ -89,7 +89,7 @@ export const ProductDetails = ({
           COLOR
         </Typography>
         <StyledBox>
-          {Colors?.map((item) => {
+          {colors?.map((item) => {
             return (
               <Box
                 style={{
@@ -112,7 +112,7 @@ export const ProductDetails = ({
           SIZE
         </Typography>
         <StyledBox>
-          {Sizes?.map((item) => {
+          {sizes?.map((item) => {
             return (
               <Box
                 style={{
