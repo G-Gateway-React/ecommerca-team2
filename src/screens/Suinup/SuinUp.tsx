@@ -22,19 +22,25 @@ const Form = styled.form`
   border-radius: 14px;
   padding: 35px 50px;
 `;
-
-const ButtonSignup = styled(Button)`
-  width: 100%;
-  height: 50px;
+export interface ProductButton {
+  ProductButton?: boolean;
+}
+export const ButtonSignup = styled(Button)`
+  width: ${(p: ProductButton) => (p.ProductButton ? "65%" : "100%")};
+  height: ${(p: ProductButton) => (p.ProductButton ? "60px" : "50px")};
+  display: flex;
+  gap: 15px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   background: #000;
   color: #fff;
-  margin: 40px 0 30px;
+  margin: ${(p: ProductButton) => (p.ProductButton ? "0" : "40px 0 30px")};
   &:hover {
-    background: #fff;
-    border: 1px solid #000;
-    color: #000;
+    background: ${(p: ProductButton) => (p.ProductButton ? "#000" : "#FFF")};
+    border: 2px solid #000;
+    border-color: ${(p: ProductButton) =>
+      p.ProductButton ? "#D1094B" : "#000"};
+    color: ${(p: ProductButton) => (p.ProductButton ? "#D1094B" : "#000")};
   }
 `;
 
@@ -89,7 +95,7 @@ export const SignUp = () => {
   };
   return (
     <>
-       <Nav black NumItems={2}/>
+      <Nav black NumItems={2} />
       <Box
         sx={{
           display: "flex",
