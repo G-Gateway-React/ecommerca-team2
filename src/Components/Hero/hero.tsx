@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import img1 from "../../assets/mask.png";
+import img1 from "../../Assets/mask.png";
 import Button from "../Button";
 import Nav from "../NavBar/Navbar";
 

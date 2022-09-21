@@ -6,12 +6,26 @@ import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 type NavProps = {
   black?: boolean;
   NumItems?: number;
 };
 const Child = ({ black, NumItems }: NavProps) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [isHome, setIsHome] = useState(false);
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setIsHome(true);
+    } else {
+      setIsHome(false);
+    }
+  }, [location]);
+
   const StyledTypography = styled(Typography)(({ theme }) => ({
     fontSize: "1rem",
     fontWeight: black ? "400" : "200",
@@ -57,6 +71,7 @@ const Child = ({ black, NumItems }: NavProps) => {
           <LogoStyledTypography
             variant="h6"
             sx={{ flexGrow: 5, textAlign: "center" }}
+            onClick={() => navigate("/")}
           >
             ShoOp
           </LogoStyledTypography>
@@ -65,11 +80,19 @@ const Child = ({ black, NumItems }: NavProps) => {
             <SearchIcon /> SEARCH
           </StyledTypography>
 
-          <StyledTypography variant="h6" sx={{ flexGrow: 1 }}>
+          <StyledTypography
+            variant="h6"
+            sx={{ flexGrow: 1 }}
+            onClick={() => navigate("/Login")}
+          >
             SIGN IN
           </StyledTypography>
 
-          <StyledTypography variant="h6" sx={{ flexGrow: 1 }}>
+          <StyledTypography
+            variant="h6"
+            sx={{ flexGrow: 1 }}
+            onClick={() => navigate("/Bag")}
+          >
             BAG{NumItems}
           </StyledTypography>
           <FavoriteBorderIcon sx={{ color: "#000" }} />
