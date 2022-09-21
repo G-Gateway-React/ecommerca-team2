@@ -8,14 +8,21 @@ export const FooterStyle = styled.div`
     font-size: 13px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 
    @media screen and(max-width: 600px){
     font-size: 5px;
    }
 `
 
+export const ParentFooter = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color:red; */
 
+
+`
 export const AnchorLink = styled(Link)`
     text-decoration: none;
     color: black;
@@ -42,31 +49,13 @@ flex-direction: column;
 gap: 10px;
 `
 
-export const SingFooter = styled.div`
-display: flex;
-justify-content:center;
-flex-direction: column;
 
-input {
+export const InboxInput  =styled.input`
     width: 42%;
+    height: 42px;
     border:none;
-    border-bottom: 1px solid #d8d8d8;  
-     outline: none;
-}
-button{
-    color: black;
-    border:none;
-    margin-left: -50px;
-    font-weight: bold;
-    background:none;
-}
-`
-// export const InboxInput  =styled.input`
-//     width: 42%;
-//     height: 42px;
-//     border:none;
-//     outline: none;
-//     border-bottom: 1px solid #d8d8d8;
+    outline: none;
+    border-bottom: 1px solid #d8d8d8;`
 
     
 // `

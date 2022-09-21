@@ -5,7 +5,11 @@ import Hero from "../../Components/Hero/hero";
 const Home: React.FC = () => {
   return (
     <>
-      <Hero/> 
+
+      <Hero/>
+
+
+
       <Cards />
       <Footer />
     </>

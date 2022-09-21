@@ -1,6 +1,6 @@
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import { AnchorLink, Parent, List, FooterStyle } from "./style";
+import { AnchorLink, Parent, List, FooterStyle, ParentFooter} from "./style";
 
 import { Container } from "@mui/system";
 import SingFootersection from "../SingFooter";
@@ -9,6 +9,7 @@ const Footer: React.FC = () => {
   return (
     <>
       <Container>
+        <ParentFooter>
         <SingFootersection />
         <FooterStyle>
           <Parent>
@@ -59,6 +60,7 @@ const Footer: React.FC = () => {
             </List>
           </Parent>
         </FooterStyle>
+        </ParentFooter>
       </Container>
     </>
   );
