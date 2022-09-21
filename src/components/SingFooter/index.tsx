@@ -1,4 +1,6 @@
-import { SingFooter } from "../Footer/style";
+// import { SingFooter } from "../Footer/style";
+
+import { SingFooter } from "./Style";
 
 function SingFootersection() {
   return (
